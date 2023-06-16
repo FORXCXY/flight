@@ -42,16 +42,16 @@ class flightMap extends React.PureComponent {
     });
 
     componentDidMount() {
-            fetch("http://flightapi.xiexianbo.xin/airPort/listAll")
-                .then(res => res.json())
-                .then(newdata => {
-                    let data = newdata.data.data;
-                    this.setState({     
-                        source: {...this.state.source, data}
-                    }, () => {
-                        console.log('yes');
-                    });
-                })
+        fetch("http://flightapi.xiexianbo.xin/airPort/listAll")
+            .then(res => res.json())
+            .then(newdata => {
+                let data = newdata.data.data;
+                this.setState({
+                    source: {...this.state.source, data}
+                }, () => {
+                    console.log('yes');
+                });
+            })
     }
 
     handleShow = (event) => {
@@ -113,11 +113,11 @@ class flightMap extends React.PureComponent {
 
                 </Drawer>
                 <LarkMap id="container"  map={this.mapInstance} style={{height: '800px'}}>
-                <PointLayer
-                    {...layerOptions}
-                            source={this.state.source}
-                            onClick={(e)=>this.handleShow(e)}
-                />
+                    <PointLayer
+                        {...layerOptions}
+                        source={this.state.source}
+                        onClick={(e)=>this.handleShow(e)}
+                    />
                 </LarkMap>
             </>
         )
