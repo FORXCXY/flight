@@ -1,0 +1,136 @@
+@import '~antd/dist/reset.css';
+
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #1f85a1;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#main_div {
+    display: flex;
+    flex-direction: row;
+    height: 1033px;
+    width: 100%;
+}
+
+#left_div {
+    display: flex;
+    /*flex-direction: column;*/
+    /*background-color: red;*/
+    width: 15%;
+    height: 1033px;
+}
+
+#right_div {
+    display: flex;
+    flex-direction: column;
+    height: 1033px;
+    width: 85%;
+}
+
+.scroll-container {
+    height: 100%;
+    width: 100%;
+    overflow: auto; /*滚动条*/
+  }
+
+#right_down_div{
+    height: 233px;
+    /* background-color: blue; */
+    width: 100%;
+}
+
+.tab_div{
+    display: flex;
+    flex-direction: row;
+    /* align-content: space-around; */
+    height: 160px;
+    width: 100%;
+    border: #282c34 1px solid;
+    border-radius: 3px;
+    /* background-color: red; */
+}
+
+.item_div{
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 3px;
+}
+
+.item_div:hover{
+    box-shadow:#282c34 0px 0px 10px 0px;
+}
+
+.searchResultItem_div{
+    height: 30px;
+    width: 50%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#searchResult_div{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+#search{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 65%;
+    justify-content: space-evenly;
+    border:#282c34 1px solid
+}
+
+.search_options{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 35%;
+    justify-content: space-evenly;
+}
+
+.result_head{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-around;
+}
